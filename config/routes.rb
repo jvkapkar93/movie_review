@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'movies#index', as: 'home'
-  #resources :movies
+#   resources :movies do
+#     collection do
+#     get 'search'
+#   end
+# end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get '/movies', to: 'movies#index', as: 'movies'
   post '/movies', to:'movies#create', as: 'add_movie'
@@ -18,6 +22,7 @@ Rails.application.routes.draw do
   get '/movies/:movie_id/reviews/new', to: 'reviews#new', as: 'new_movie_review'
   get '/movies/:movie_id/reviews/:id/edit', to: 'reviews#edit', as: 'edit_movie_review'
   put '/movies/:movie_id/reviews/:id', to: 'reviews#update', as: 'movie_review'
+  get '/movies/search', to: 'movies#search', as: 'search_movies'
 
 
 end

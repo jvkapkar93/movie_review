@@ -8444,3 +8444,351 @@ Processing by MoviesController#show as HTML
 Completed 200 OK in 79ms (Views: 71.3ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/movies/5" for 127.0.0.1 at 2017-10-29 22:38:54 +0530
+  
+ArgumentError (can't use collection outside resource(s) scope):
+  
+config/routes.rb:22:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/movies/5" for 127.0.0.1 at 2017-10-29 22:43:19 +0530
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered movies/show.html.erb within layouts/application (16.9ms)
+  Rendered layouts/_navheaders.html.erb (0.7ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 2.6ms)
+
+
+  
+SyntaxError (/home/jagannath/Git_Applications/movie_review/app/views/layouts/_navheaders.html.erb:27: syntax error, unexpected '='
+...vie_path, method: 'get', class="navbar-form navbar-right", r...
+...                               ^
+/home/jagannath/Git_Applications/movie_review/app/views/layouts/_navheaders.html.erb:27: syntax error, unexpected ',', expecting keyword_end
+...ass="navbar-form navbar-right", role: 'search'  do@output_bu...
+...                               ^
+/home/jagannath/Git_Applications/movie_review/app/views/layouts/_navheaders.html.erb:27: syntax error, unexpected keyword_do_block, expecting keyword_end
+...vbar-right", role: 'search'  do@output_buffer.safe_append='
+...                               ^
+/home/jagannath/Git_Applications/movie_review/app/views/layouts/_navheaders.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/layouts/_navheaders.html.erb:27: syntax error, unexpected '='
+app/views/layouts/_navheaders.html.erb:27: syntax error, unexpected ',', expecting keyword_end
+app/views/layouts/_navheaders.html.erb:27: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/layouts/_navheaders.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__589064992196110373_69966853036140'
+Started GET "/movies/5" for 127.0.0.1 at 2017-10-29 22:44:15 +0530
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered movies/show.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navheaders.html.erb (2.1ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 1.6ms)
+
+
+  
+SyntaxError (/home/jagannath/Git_Applications/movie_review/app/views/layouts/_navheaders.html.erb:27: syntax error, unexpected '='
+...ies_path, method: 'get', class="navbar-form navbar-right", r...
+...                               ^
+/home/jagannath/Git_Applications/movie_review/app/views/layouts/_navheaders.html.erb:27: syntax error, unexpected ',', expecting keyword_end
+...ass="navbar-form navbar-right", role: 'search'  do@output_bu...
+...                               ^
+/home/jagannath/Git_Applications/movie_review/app/views/layouts/_navheaders.html.erb:27: syntax error, unexpected keyword_do_block, expecting keyword_end
+...vbar-right", role: 'search'  do@output_buffer.safe_append='
+...                               ^
+/home/jagannath/Git_Applications/movie_review/app/views/layouts/_navheaders.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/layouts/_navheaders.html.erb:27: syntax error, unexpected '='
+app/views/layouts/_navheaders.html.erb:27: syntax error, unexpected ',', expecting keyword_end
+app/views/layouts/_navheaders.html.erb:27: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/layouts/_navheaders.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__589064992196110373_69966735421380'
+Started GET "/movies/5" for 127.0.0.1 at 2017-10-29 22:44:46 +0530
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered movies/show.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_navheaders.html.erb (0.7ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 1.6ms)
+
+
+  
+SyntaxError (/home/jagannath/Git_Applications/movie_review/app/views/layouts/_navheaders.html.erb:27: syntax error, unexpected '='
+...vies_path, method: :get, class="navbar-form navbar-right", r...
+...                               ^
+/home/jagannath/Git_Applications/movie_review/app/views/layouts/_navheaders.html.erb:27: syntax error, unexpected ',', expecting keyword_end
+...ass="navbar-form navbar-right", role: "search"  do @output_b...
+...                               ^
+/home/jagannath/Git_Applications/movie_review/app/views/layouts/_navheaders.html.erb:27: syntax error, unexpected keyword_do_block, expecting keyword_end
+...vbar-right", role: "search"  do @output_buffer.safe_append='
+...                               ^
+/home/jagannath/Git_Applications/movie_review/app/views/layouts/_navheaders.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/layouts/_navheaders.html.erb:27: syntax error, unexpected '='
+app/views/layouts/_navheaders.html.erb:27: syntax error, unexpected ',', expecting keyword_end
+app/views/layouts/_navheaders.html.erb:27: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/layouts/_navheaders.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__589064992196110373_69966852488600'
+Started GET "/movies/5" for 127.0.0.1 at 2017-10-29 22:46:26 +0530
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered movies/show.html.erb within layouts/application (8.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navheaders.html.erb (1.7ms)
+Completed 200 OK in 74ms (Views: 69.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/movies/5" for 127.0.0.1 at 2017-10-29 22:47:30 +0530
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered movies/show.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navheaders.html.erb (1.6ms)
+Completed 200 OK in 53ms (Views: 47.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies/5" for 127.0.0.1 at 2017-10-29 22:50:24 +0530
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered movies/show.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navheaders.html.erb (118.9ms)
+Completed 500 Internal Server Error in 174ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `text_feild_tag' for #<#<Class:0x007f44d9cf13e8>:0x007f44cc494220>
+Did you mean?  text_field_tag):
+    26:         
+    27:         <%= form_tag search_movies_path, method: :get, class:"navbar-form navbar-right", role: "search"  do %>
+    28:         <p>
+    29:         	<%= text_feild_tag :search, params[:search], class: "form-control" %>
+    30:         </p>
+    31:         <% end%>
+    32:         <form class="form-inline mt-2 mt-md-0">
+  
+app/views/layouts/_navheaders.html.erb:29:in `block in _app_views_layouts__navheaders_html_erb__1319612247567844012_69966736337200'
+app/views/layouts/_navheaders.html.erb:27:in `_app_views_layouts__navheaders_html_erb__1319612247567844012_69966736337200'
+app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__589064992196110373_69966434106660'
+Started GET "/movies/5" for 127.0.0.1 at 2017-10-29 22:50:44 +0530
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered movies/show.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navheaders.html.erb (1.8ms)
+Completed 200 OK in 61ms (Views: 54.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/movies/5" for 127.0.0.1 at 2017-10-29 22:50:47 +0530
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered movies/show.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navheaders.html.erb (3.1ms)
+Completed 200 OK in 65ms (Views: 60.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/movies/5" for 127.0.0.1 at 2017-10-29 22:53:04 +0530
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered movies/show.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navheaders.html.erb (2.7ms)
+Completed 200 OK in 60ms (Views: 53.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/movies/search?utf8=%E2%9C%93&search=sdfsdf" for 127.0.0.1 at 2017-10-29 22:53:14 +0530
+Processing by MoviesController#show as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"sdfsdf", "id"=>"search"}
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=search):
+  
+app/controllers/movies_controller.rb:69:in `set_movie'
+Started GET "/movies/search?utf8=%E2%9C%93&search=sdfsdf" for 127.0.0.1 at 2017-10-29 22:54:50 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MoviesController#show as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"sdfsdf", "id"=>"search"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 18ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=search):
+  
+app/controllers/movies_controller.rb:69:in `set_movie'
+Started GET "/movies/search" for 127.0.0.1 at 2017-10-29 22:54:58 +0530
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"search"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=search):
+  
+app/controllers/movies_controller.rb:69:in `set_movie'
+Started GET "/movies" for 127.0.0.1 at 2017-10-29 22:55:05 +0530
+Processing by MoviesController#index as HTML
+  [1m[33mMovie Search (6.8ms)[0m  curl http://localhost:9200/movies_development/_search?pretty -d '{"query":{"match_all":{}},"size":10,"from":0,"timeout":"11s","_source":false}'
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (9, 11, 16, 23, 28, 4, 12, 17, 24, 29)[0m
+  Rendered movies/index.html.erb within layouts/application (24.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navheaders.html.erb (30.6ms)
+Completed 200 OK in 417ms (Views: 392.8ms | Searchkick: 6.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/movies/search?utf8=%E2%9C%93&search=vxcvc" for 127.0.0.1 at 2017-10-29 22:55:12 +0530
+Processing by MoviesController#show as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"vxcvc", "id"=>"search"}
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=search):
+  
+app/controllers/movies_controller.rb:69:in `set_movie'
+Started GET "/movies" for 127.0.0.1 at 2017-10-29 22:56:38 +0530
+Processing by MoviesController#index as HTML
+  [1m[33mMovie Search (6.1ms)[0m  curl http://localhost:9200/movies_development/_search?pretty -d '{"query":{"match_all":{}},"size":10,"from":0,"timeout":"11s","_source":false}'
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (9, 11, 16, 23, 28, 4, 12, 17, 24, 29)[0m
+  Rendered movies/index.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navheaders.html.erb (2.7ms)
+Completed 200 OK in 65ms (Views: 56.4ms | Searchkick: 6.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2017-10-29 22:56:41 +0530
+Processing by MoviesController#index as HTML
+  [1m[33mMovie Search (6.8ms)[0m  curl http://localhost:9200/movies_development/_search?pretty -d '{"query":{"match_all":{}},"size":10,"from":0,"timeout":"11s","_source":false}'
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (9, 11, 16, 23, 28, 4, 12, 17, 24, 29)[0m
+  Rendered movies/index.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navheaders.html.erb (1.9ms)
+Completed 200 OK in 65ms (Views: 55.3ms | Searchkick: 6.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2017-10-29 22:56:42 +0530
+Processing by MoviesController#index as HTML
+  [1m[33mMovie Search (6.5ms)[0m  curl http://localhost:9200/movies_development/_search?pretty -d '{"query":{"match_all":{}},"size":10,"from":0,"timeout":"11s","_source":false}'
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" IN (9, 11, 16, 23, 28, 4, 12, 17, 24, 29)[0m
+  Rendered movies/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navheaders.html.erb (2.5ms)
+Completed 200 OK in 60ms (Views: 50.9ms | Searchkick: 6.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2017-10-29 22:56:44 +0530
+Processing by MoviesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering movies/new.html.erb within layouts/application
+  Rendered movies/new.html.erb within layouts/application (18.5ms)
+  Rendered layouts/_navheaders.html.erb (0.9ms)
+Completed 200 OK in 104ms (Views: 60.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/search?utf8=%E2%9C%93&search=test" for 127.0.0.1 at 2017-10-29 22:56:50 +0530
+Processing by MoviesController#show as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"test", "id"=>"search"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=search):
+  
+app/controllers/movies_controller.rb:69:in `set_movie'
